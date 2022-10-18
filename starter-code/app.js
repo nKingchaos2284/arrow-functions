@@ -211,7 +211,7 @@ joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//this refers to the new object created
+//this refers to the new object 
 // 2. What is "this" when joe.scopeArrow() is invoked?just for the scope arrow is in it's own class
 //
 // 3. Explain why "this" is different when an arrow function is used. Arrow functions cant use the syntax
