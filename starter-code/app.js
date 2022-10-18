@@ -111,9 +111,10 @@ console.log('Hello from the new object function', newObject(['hi', 'hello', 'are
 let sum = function(a, b, c, d) {
   return a + b + c + d;
 };
-
+let newSum = (a, b, c, d) => `${a + b + c + d}`;
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
+console.log(newSum(1, 2, 3, 4));
 
 
 let objectLit = function() {
@@ -124,27 +125,40 @@ let objectLit = function() {
   };
 };
 
+let newObjectLit = array => ({
+  keys1: 'value1',
+  keys2: 'value2',
+  keys3: 'value3',
+});
+
+
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
-
+console.log(newObjectLit());
 
 let sumAndProduct = function(a, b) {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
 };
+let newSumAndProduct = (a, b) => {
+  let sum = a + b;
+  let product = a* b;
+  return[sum, product];
+};
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sumAndProduct(3, 9));
-
+console.log(newSumAndProduct(4, 8));
 
 let message = function(name) {
   return `Hello, ${name}!`;
 };
+let newMessage = name => `Hello, ${name}!`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(message('Allie'));
-
+console.log(newMessage('Joey'));
 
 let Student = function(name, age, hometown) {
   this.name = name;
@@ -159,8 +173,6 @@ let joe = new Student('Joe', 'Schmoe', 100);
 console.log(joe);
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
-
-
 
 Student.prototype.greeting = => {
   return `Hi, my name is ${this.name}`;
@@ -195,13 +207,13 @@ joe.scope();
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
+//this refers to the new object created
+// 2. What is "this" when joe.scopeArrow() is invoked?just for the scope arrow is in it's own class
 //
-// 2. What is "this" when joe.scopeArrow() is invoked?
-//
-// 3. Explain why "this" is different when an arrow function is used.
+// 3. Explain why "this" is different when an arrow function is used. Arrow functions cant use the syntax
 
 //
